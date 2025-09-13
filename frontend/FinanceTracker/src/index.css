@@ -295,3 +295,14 @@ html.dark .epr-emoji-category-list span {
   color: #111827 !important; /* dark text */
   background: #fff !important; /* white background */
 }
+
+/* Make emoji picker headings and filter labels always dark and bold */
+.epr-emoji-category-label,
+.epr-emoji-category-list span,
+.epr-emoji-picker h2,
+.epr-emoji-picker h3,
+.epr-emoji-picker p,
+.epr-emoji-picker label {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
