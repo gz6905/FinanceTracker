@@ -276,3 +276,10 @@ html.dark .modal-content select,
 html.dark .modal-content textarea {
   color: #f3f4f6;
 }
+
+.picker-icon {
+  color: #111827; /* dark gray for light mode */
+}
+html.dark .picker-icon {
+  color: #f3f4f6; /* light gray for dark mode */
+}
