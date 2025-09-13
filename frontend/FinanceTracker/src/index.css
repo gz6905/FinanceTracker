@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Poppins", "sans-serif";
+  --breakpoint-3xl: 1920px;
+  --color-primary: #875cf5;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+  }
+
+  body {
+    background-color: #fcfbfc;
+    overflow-x: hidden;
+  }
+
+  html.dark body {
+    background-color: #111827;
+    color: #f3f4f6;
+  }
+}
+
+/* INPUTS */
+.input-box {
+  @apply w-full flex justify-between gap-3 text-sm text-black bg-slate-100 rounded px-4 py-3 mb-4 mt-3 border border-slate-200 outline-none transition-colors duration-300;
+}
+html.dark .input-box {
+  @apply text-white bg-gray-800 border-gray-700;
+}
+
+/* BUTTONS */
+.btn-primary {
+  @apply w-full text-sm font-medium text-white bg-violet-500 shadow-lg shadow-purple-600/5 p-[10px] rounded-md my-1 hover:bg-purple-600/90 hover:text-white transition-colors duration-200;
+}
+.add-btn {
+  @apply flex items-center gap-1.5 text-xs md:text-sm font-medium text-purple-600 whitespace-nowrap bg-purple-50 border border-purple-100 rounded-lg px-4 py-2 cursor-pointer transition-colors duration-200;
+}
+.add-btn-fill {
+  @apply text-white bg-primary;
+}
+.card-btn {
+  @apply flex items-center gap-3 text-[12px] font-medium text-gray-700 hover:text-purple-500 bg-gray-50 hover:bg-purple-50 px-4 py-1.5 rounded-lg border border-gray-200/50 cursor-pointer transition-colors duration-200;
+}
+html.dark .btn-primary {
+  @apply bg-violet-600 text-white hover:bg-violet-700;
+}
+html.dark .add-btn {
+  @apply text-purple-400 bg-purple-900/20 border-purple-800;
+}
+html.dark .card-btn {
+  @apply text-gray-300 hover:text-purple-400 bg-gray-700 hover:bg-purple-900/20 border-gray-600;
+}
+
+/* CARDS */
+.card {
+  @apply bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl shadow-lg shadow-gray-200 border border-gray-100 transition-colors duration-300;
+}
+html.dark .card {
+  @apply bg-gradient-to-br from-gray-900 to-gray-800 shadow-xl shadow-white/10 border-2 border-white/40;
+}
+
+/* TYPOGRAPHY */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark p,
+html.dark span {
+  color: inherit;
+}
+html.dark .text-gray-700 {
+  @apply text-gray-300;
+}
+html.dark .text-gray-500 {
+  @apply text-gray-400;
+}
+html.dark .text-gray-900 {
+  @apply text-gray-100;
+}
+
+/* BACKGROUNDS */
+html.dark .bg-gray-50 {
+  @apply bg-gray-800;
+}
+html.dark .bg-gray-100 {
+  @apply bg-gray-700;
+}
+html.dark .bg-white {
+  @apply bg-gray-800;
+}
+
+/* MISC */
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 300ms;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  backdrop-filter: blur(2px);
+  transition: background 0.3s, border 0.3s;
+}
+html.dark .navbar {
+  background-color: #111827;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* SIDEBAR */
+.side-menu {
+  width: 16rem; /* 64 */
+  height: calc(100vh - 61px);
+  background-color: #fff;
+  border-right: 1px solid #e5e7eb;
+  padding: 1.25rem; /* 5 */
+  position: sticky;
+  top: 61px;
+  z-index: 20;
+  transition: background 0.3s, border 0.3s;
+}
+html.dark .side-menu {
+  background-color: #111827;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.side-menu-profile img.side-menu-avatar {
+  width: 5rem;
+  height: 5rem;
+  background: #94a3b8;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.side-menu-username {
+  color: #111827;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+html.dark .side-menu-username {
+  color: #f3f4f6;
+}
+
+.side-menu-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 15px;
+  color: #374151;
+  background: transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.side-menu-btn:hover {
+  background: #f3f4f6;
+  color: #875cf5;
+}
+html.dark .side-menu-btn {
+  color: #d1d5db;
+}
+html.dark .side-menu-btn:hover {
+  background: #23272f;
+  color: #a78bfa;
+}
+
+.side-menu-btn-active {
+  background: #875cf5;
+  color: #fff;
+}
+html.dark .side-menu-btn-active {
+  background: #6d28d9;
+  color: #fff;
+}
+
+/* MODAL STYLES */
+.modal-overlay {
+  @apply fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full overflow-y-auto overflow-x-hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  @apply rounded-lg shadow-xl;
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-4 md:p-5 border-b rounded-t;
+  border-color: #e5e7eb;
+}
+
+.modal-title {
+  @apply text-lg font-medium;
+  color: #111827;
+}
+
+.modal-close-btn {
+  @apply bg-transparent rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center cursor-pointer transition-colors duration-200;
+  color: #6b7280;
+}
+
+.modal-close-btn:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.modal-body {
+  @apply p-4 md:p-5 space-y-4;
+  color: #111827;
+}
+
+/* Force all text elements in modal to be dark in light mode */
+.modal-content label,
+.modal-content p,
+.modal-content span,
+.modal-content div {
+  color: #111827;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  color: #111827;
+}
+
+/* Dark mode for modal */
+html.dark .modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+html.dark .modal-content {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+html.dark .modal-header {
+  border-color: #4b5563;
+}
+
+html.dark .modal-title {
+  color: #f3f4f6;
+}
+
+html.dark .modal-close-btn {
+  color: #9ca3af;
+}
+
+html.dark .modal-close-btn:hover {
+  background-color: #374151;
+  color: #f3f4f6;
+}
+
+html.dark .modal-body {
+  color: #f3f4f6;
+}
+
+html.dark .modal-content label,
+html.dark .modal-content p,
+html.dark .modal-content span,
+html.dark .modal-content div {
+  color: #f3f4f6;
+}
+
+html.dark .modal-content input,
+html.dark .modal-content select,
+html.dark .modal-content textarea {
+  color: #f3f4f6;
+}
