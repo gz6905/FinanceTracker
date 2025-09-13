@@ -278,8 +278,8 @@ html.dark .modal-content textarea {
 }
 
 .picker-icon {
-  color: #111827; /* dark gray for light mode */
+  color: #2563eb; /* Tailwind blue-600 for light mode */
 }
 html.dark .picker-icon {
-  color: #f3f4f6; /* light gray for dark mode */
+  color: #60a5fa; /* Tailwind blue-400 for dark mode */
 }
