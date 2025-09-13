@@ -284,7 +284,7 @@ html.dark .picker-icon {
   color: #60a5fa; /* Tailwind blue-400 for dark mode */
 }
 
-/* Light mode: dark text, white background */
+/* Emoji picker: always dark text on white background, both modes */
 .epr-search input,
 .epr-body,
 .epr-emoji-category-list,
@@ -294,12 +294,11 @@ html.dark .picker-icon {
   background: #fff !important; /* white background */
 }
 
-/* Dark mode: white text, dark background */
 html.dark .epr-search input,
 html.dark .epr-body,
 html.dark .epr-emoji-category-list,
 html.dark .epr-emoji-category-label,
 html.dark .epr-emoji-category-list span {
-  color: #fff !important; /* white text */
-  background: #1f2937 !important; /* dark background */
+  color: #111827 !important; /* dark text */
+  background: #fff !important; /* white background */
 }
