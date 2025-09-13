@@ -15,7 +15,7 @@ const EmojiPickerPopup = ({ icon, onSelect }) => {
           {icon ? (
             <img src={icon} alt="Icon" className="w-12 h-12" />
           ) : (
-            <LuImage />
+            <LuImage className="text-gray-900 dark:text-white" />
           )}
         </div>
 
