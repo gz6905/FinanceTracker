@@ -227,11 +227,7 @@ html.dark .side-menu-btn-active {
   color: #111827;
 }
 
-.modal-content input,
-.modal-content select,
-.modal-content textarea {
-  color: #111827;
-}
+/* Do NOT set input/select/textarea color here! */
 
 /* Dark mode for modal */
 html.dark .modal-overlay {
@@ -271,12 +267,9 @@ html.dark .modal-content div {
   color: #f3f4f6;
 }
 
-html.dark .modal-content input,
-html.dark .modal-content select,
-html.dark .modal-content textarea {
-  color: #f3f4f6;
-}
+/* Do NOT set input/select/textarea color here! */
 
+/* Picker icon color */
 .picker-icon {
   color: #2563eb; /* Tailwind blue-600 for light mode */
 }
